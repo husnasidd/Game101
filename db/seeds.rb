@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-questions = [{:category => "Colors", :image => 'link', :prompt=> "What color is this?", :answer => "blue"},
-          {:category =>"Colors", :image => 'link', :prompt=> "What color is this?", :answer => "green"},
-          {:category => "Colors", :image => 'link', :prompt=> "What color is this?", :answer => "pink"},
+questions = [{:category => "Colors", :image => "blue.png", :prompt=> "What color is this?", :answer => "blue"},
+          {:category =>"Colors", :image => "green.png", :prompt=> "What color is this?", :answer => "green"},
+          {:category => "Colors", :image => "pink.png", :prompt=> "What color is this?", :answer => "pink"},
     	  {:category => "Shapes", :image => 'link', :prompt=> "What shape is this?", :answer => "circle"},
     	  {:category => "Shapes", :image => 'link', :prompt=> "What shape is this?", :answer => "triangle"},
     	  {:category => "Shapes", :image => 'link', :prompt=> "What shape is this?", :answer => "square"},

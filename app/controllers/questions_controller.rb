@@ -45,6 +45,7 @@ class QuestionsController < ApplicationController
     def check_answer
         if(params[:answer] == session[:answer])
             flash[:notice] = "Correct"
+            
         else
             flash[:notice] = "Incorrect"
         end
