@@ -1,6 +1,9 @@
 Choices:
 - session[:all_answers].each do |shuffle|
   #{shuffle}
+%br
+%br
+Attempt #{session[:game_counter]}
 
 %br
 %br
@@ -10,5 +13,6 @@ You chose: #{params[:answer]}
 The correct answer was: #{session[:answer]}
 
 %p.flash= flash[:notice]
-
-= button_to 'Continue', questions_id_path(:category => session[:category], :id=> 'selected_#{category}')
+%p.flash= flash[:warning]
+- if session[:game_counter] < @numberOfQuestions 
+  = button_to 'Continue', questions_id_path(:category => session[:category], :id=> 'selected_#{category}')

@@ -8,11 +8,13 @@ Game101::Application.routes.draw do
    post '/questions/id' => 'questions#show'
    get 'questions/id/categories' => 'questions#categories'
    post 'questions/answer/id' => 'questions#check_answer'
+   get 'questions/answer/id' => 'questions#check_answer'
+   get '/questions/game/id' => 'questions#end_game'
+
 #mv  get '/questions' => 'questions#categories'
   root :to => redirect('/questions/index')
 end
 
-  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
