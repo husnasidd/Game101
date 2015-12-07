@@ -1,6 +1,9 @@
-That was a wonderful game!
-Score: #{session[:correct_counter]} / #{@numberOfQuestions}
-%br
-%br
-
-=link_to "Start New Game", questions_id_categories_path()
+#main    
+    #content    
+        %b That was a wonderful game!
+        %br
+        %br
+        Overall Score: #{session[:correct_counter]} / #{@numberOfQuestions}
+        %br
+        %p To play again, click the start new game link below. 
+        =link_to "Start New Game", questions_id_categories_path()

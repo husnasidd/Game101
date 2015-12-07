@@ -1,3 +1,7 @@
-%h2 All Categories
-- @all_categories.each do |category|
-    =link_to "Questions on #{category}", questions_id_path(:category =>category, :id =>'selected_#{category}')
+#main
+    #content
+        %h1 All Categories
+        - @all_categories.each do |category|
+            =link_to "Questions on #{category}", questions_id_path(:category =>category, :id =>'selected_#{category}')
+            %br
+           

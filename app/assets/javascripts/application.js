@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function() {
+  $('#answer_submit').on('click', function() {
+    $('.flashcard').toggleClass('flipped');
+  });
+}); 

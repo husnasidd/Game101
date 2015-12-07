@@ -10,9 +10,7 @@ Game101::Application.routes.draw do
    post 'questions/answer/id' => 'questions#check_answer'
    get 'questions/answer/id' => 'questions#check_answer'
    get '/questions/game/id' => 'questions#end_game'
-
-#mv  get '/questions' => 'questions#categories'
-  root :to => redirect('/questions/index')
+  root :to => redirect('/questions')
 end
 
   

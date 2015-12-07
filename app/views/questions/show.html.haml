@@ -1,10 +1,23 @@
-%h2- #{@question.prompt}
-= image_tag("#{@question.image}", size: "200")
+#show
+ .flashcard
+  .front
+   .image= image_tag("#{@question.image}", size: "200")
+   %br
+   %h1 #{@question.prompt}
+   
+   Choices:
+   = form_tag questions_answer_id_path, :method => 'pos', :id => 'answer_form' do
+    - @answerChoices.each do |shuffle|
+     = radio_button_tag(:answer, "#{shuffle}", :answer => "#{shuffle}") 
+     #{shuffle}
+    = submit_tag 'Submit', :id => 'answer_submit'
 
-%h1 
-Choices:
-= form_tag questions_answer_id_path, :method => 'pos', :id => 'answer_form' do
- - @answerChoices.each do |shuffle|
-  = radio_button_tag(:answer, "#{shuffle}", :answer => "#{shuffle}") 
-  #{shuffle}
- = submit_tag 'Submit', :id => 'answer_submit'
+ .back
+  %br
+  %br
+  %br
+  %b this text is here?
+.home=link_to "Go back to the home page", questions_path()
+
+
+
